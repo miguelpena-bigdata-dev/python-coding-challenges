@@ -3,11 +3,9 @@ from itertools import groupby
 if __name__== '__main__':
     S = input()
     result = []
-    for _, group in groupby(S):
-        group_list = list(group)
-        result.append((len(group_list), int(group_list[0])))
-    result_text = ''
-    for item in result:
-        result_text += str(item) + ' '
-
+    for character, group in groupby(S):
+        count = len(list(group))
+        result.append(f"({count}, {character}) ")
+    
+    result_text = ''.join(result)
     print(result_text)
