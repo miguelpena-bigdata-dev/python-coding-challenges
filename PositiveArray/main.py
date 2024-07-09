@@ -1,10 +1,6 @@
+import math
 def positiveArray(N, A):
-    while True:
-        remainder = sum(A) % N
-        if remainder == 0:
-            return sum(A)
-        else:
-            A[0] += 1
+    return N * math.ceil(sum(A)/N)
 
 
 N = int(input())
