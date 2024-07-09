@@ -1,5 +1,11 @@
 def positiveArray(N, A):
-    return -404
+    while True:
+        remainder = sum(A) % N
+        if remainder == 0:
+            return sum(A)
+        else:
+            A[0] += 1
+
 
 N = int(input())
 
