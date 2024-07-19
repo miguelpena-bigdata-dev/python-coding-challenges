@@ -7,9 +7,6 @@ if __name__ == '__main__':
         else:
             word_dict[current_word] += 1
         
-    print(len(word_dict.keys()))
-    result_str = ''
-    for word_count in word_dict.values():
-        result_str += str(word_count) + ' '
-
+    print(len(word_dict))
+    result_str = ''.join([str(word_count) + ' ' for word_count in word_dict.values()])
     print(result_str)
